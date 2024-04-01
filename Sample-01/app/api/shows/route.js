@@ -13,6 +13,7 @@ export const GET = withApiAuthRequired(async function shows(req) {
         Authorization: `Bearer ${accessToken}`
       }
     });
+
     const shows = await response.json();
 
     return NextResponse.json(shows, res);
